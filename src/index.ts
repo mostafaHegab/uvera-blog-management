@@ -8,6 +8,8 @@ import { authMiddleware } from './modules/auth/auth.middleware';
 import { AppDataSource } from './db/dataSource';
 import { NotFoundError } from './errors/notFoundError';
 
+console.log('ENV VARS', env);
+
 const app = express();
 app.use(express.json());
 

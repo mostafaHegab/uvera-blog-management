@@ -4,6 +4,7 @@ dotenv.config();
 interface ENV {
     PORT: number;
     DB: {
+        url: string;
         host: string;
         port: number;
         username: string;
@@ -21,6 +22,7 @@ interface ENV {
 export const env: ENV = {
     PORT: +process.env.PORT! || 3000,
     DB: {
+        url: process.env.DB_URL!,
         host: process.env.DB_HOST!,
         port: +process.env.DB_PORT!,
         username: process.env.DB_USERNAME!,
